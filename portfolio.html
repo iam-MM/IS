@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+        <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <nav>
+            <label class="logo">Dezcorb</label>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "product.html">Products</a></li>
+                <li><a class="active" href = "#">Portfolio</a></li>
+                <li><a href = "about us.html">About Us</a></li>
+                <li><a href = "contact us.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="prtflo">
+            <div>
+                <h1 id="prs-h1">Our Products</h1>
+            </div>
+            <div class="w3-content w3-section" style="max-width:500px">
+              <img class="mySlides" src="pr1.jpg" style="width:100%">
+              <img class="mySlides" src="pr2.jpg" style="width:100%">
+              <img class="mySlides" src="pr3.jpg" style="width:100%">
+            </div>
+            
+            <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+            </script> 
+        </div>
+
+        <div class="op">
+          <div class="op-txt">
+            <h2 id="op-h2">Our Presence</h2>
+          </div>
+          <div class="op-imgs">
+            <img class="op-mySlides" src="indiaflag.jpg" style="width:40%">
+            <img class="op-mySlides" src="japanflag.jpg" style="width:40%">
+            <img class="op-mySlides" src="auflag.jpg" style="height: 315px; width: 40%;">
+
+            <button class="op-btn1" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="op-btn2" onclick="plusDivs(1)">&#10095;</button>
+          </div>
+          <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("op-mySlides");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+            </script>
+        </div>
+
+        <div class="footer">
+          <div class="inner-footer">
+              <div class="footer-items">
+                  <h5>Dezcorb</h5>
+              </div>
+              <div class="footer-items">
+                  <h6>Quick Links</h6>
+                  <div class="ql-borders"></div>
+                  <ul>
+                      <li><a href = "index.html">Home</a></li>
+                      <li><a href = "product.html">Products</a></li>
+                      <li><a class="active" href = "#">Portfolio</a></li>
+                      <li><a href = "#">About Us</a></li>
+                      <li><a href = "#">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="footer-items">
+                  <h6>Contact Us</h6>
+                  <div class="ql-borders"></div>
+                  <ul>
+                      <li><i class="fa fa-map-marker" aria-hidden="true"></i>1, XYZ Street, Banglore</li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i>1234567890</li>
+                      <li><i class="fa fa-envelope" aria-hidden="true"></i>dez@don.com</li>
+                  </ul>
+                  <div class="social-media">
+                      <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                      <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              Copyright &copy; Dezcorb 2020. All Rights Reserved.
+          </div>
+      </div>
+  </body>
+</html>
